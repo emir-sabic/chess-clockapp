@@ -1,1 +1,33 @@
-<p>chess-clock works!</p>
+<div class="container">
+  <h1>Chess Clock</h1>
+  <div class="clocks">
+    <div class="clock" [ngClass]="{'active': currentPlayer === 1}">
+      <h2>Player 1</h2>
+      <div class="timer">{{ formatMinutesSeconds(player1Time) }}</div>
+      <div class="controls">
+        <button (click)="switchPlayer()">Switch Player</button>
+        <button (click)="startTimer()">Start</button>
+        <button (click)="pauseTimer()">Pause</button>
+        <button (click)="resetTimer()">Reset</button>
+      </div>
+    </div>
+    <div class="clock" [ngClass]="{'active': currentPlayer === 2}">
+      <h2>Player 2</h2>
+      <div class="timer">{{ formatMinutesSeconds(player2Time) }}</div>
+      <div class="controls">
+        <button (click)="switchPlayer()">Switch Player</button>
+        <button (click)="startTimer()">Start</button>
+        <button (click)="pauseTimer()">Pause</button>
+        <button (click)="resetTimer()">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="options">
+    <h3>Time Options</h3>
+    <button (click)="setTime(1)">1 min - 0 sec</button>
+    <button (click)="setTime(3)">3 min - 2 sec</button>
+    <button (click)="setTime(5)">5 min - 3 sec</button>
+    <button (click)="setTime(15)">15 min - 10 sec</button>
+    <button (click)="setTime(25)">25 min - 10 sec</button>
+  </div>
+</div>
