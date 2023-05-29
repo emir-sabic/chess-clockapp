@@ -63,7 +63,7 @@ button:focus {
 
 @media (min-width: 768px) {
   .clock {
-    width: 300px;
+    width: 350px;
     max-width: none;
   }
 }
