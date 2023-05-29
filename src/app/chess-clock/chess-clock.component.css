@@ -61,9 +61,13 @@ button:focus {
   box-shadow: 0 0 5px #4caf50;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 414px) {
+  .clocks{
+    width:100%;
+    justify-content: center;
+  }
   .clock {
-    width: 350px;
-    max-width: none;
+    width: 100%;
+   
   }
 }
