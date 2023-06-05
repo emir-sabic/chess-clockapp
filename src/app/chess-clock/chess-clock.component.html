@@ -4,22 +4,16 @@
     <div class="clock" [ngClass]="{'active': currentPlayer === 1}">
       <h2>Player 1</h2>
       <div class="timer">{{ formatMinutesSeconds(player1Time) }}</div>
-      <div class="controls">
-        <button (click)="switchPlayer()">Switch Player</button>
-        <button (click)="startTimer()">Start</button>
-        <button (click)="pauseTimer()">Pause</button>
-        <button (click)="resetTimer()">Reset</button>
-      </div>
+    </div>
+    <div class="controls">
+      <button class="switch-button" (click)="switchPlayer()">Switch Player</button>
+      <button (click)="startTimer()">Start</button>
+      <button (click)="pauseTimer()">Pause</button>
+      <button (click)="resetTimer()">Reset</button>
     </div>
     <div class="clock" [ngClass]="{'active': currentPlayer === 2}">
       <h2>Player 2</h2>
       <div class="timer">{{ formatMinutesSeconds(player2Time) }}</div>
-      <div class="controls">
-        <button (click)="switchPlayer()">Switch Player</button>
-        <button (click)="startTimer()">Start</button>
-        <button (click)="pauseTimer()">Pause</button>
-        <button (click)="resetTimer()">Reset</button>
-      </div>
     </div>
   </div>
   <div class="options">
